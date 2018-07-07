@@ -9,7 +9,8 @@ RUN apk add --no-cache apache2-ssl tzdata && \
     apk del --no-cache tzdata && \
     mkdir -p /run/apache2 && \
     rm -f /etc/apache2/conf.d/info.conf && \
-    rm -f /etc/apache2/conf.d/userdir.conf
+    rm -f /etc/apache2/conf.d/userdir.conf && \
+    rm -f /var/www/localhost/cgi-bin/*
 
 EXPOSE 80 443
 
